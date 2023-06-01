@@ -81,3 +81,5 @@ $string  = ArrayHelper::replaceBracesWithValues($array1);
 
 ## Tests
 Includes PHPUnit test suite.
+
+To run the tests from the root of the project in the terminal: ```./vendor/bin/phpunit```

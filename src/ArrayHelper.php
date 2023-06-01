@@ -61,7 +61,7 @@ class ArrayHelper extends Arr
             return false;
         }
 
-        return $array[0] === $value;
+        return reset($array) === $value;
     }
 
 

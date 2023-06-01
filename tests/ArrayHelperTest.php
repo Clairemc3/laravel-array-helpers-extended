@@ -42,13 +42,30 @@ final class ArrayHelperTest extends TestCase
      *
      * @return void
      */
-    public function testHasOnlyValueIsReturnsTrue(): void
+    public function testHasOnlyValueIsReturnsTrueWithIndexedArray(): void
     {
         // Given I have an array with one value
         $array1 = ['one'];
 
         // Given I am looking for a string value in the array
         $valueToLookFor = 'one';
+
+        // Then the hasOnlyValue method should return true
+        $this->assertTrue(ArrayHelper::hasOnlyValue($array1, $valueToLookFor));
+    }
+
+    /**
+     * Testing hasOnlyValue()
+     *
+     * @return void
+     */
+    public function testHasOnlyValueIsReturnsTrueWithAssocArray(): void
+    {
+        // Given I have an array with one value
+        $array1 = ['skill' => 'php'];
+
+        // Given I am looking for a string value in the array
+        $valueToLookFor = 'php';
 
         // Then the hasOnlyValue method should return true
         $this->assertTrue(ArrayHelper::hasOnlyValue($array1, $valueToLookFor));
